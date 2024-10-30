@@ -1,0 +1,21 @@
+﻿<Window x:Class="_30._10_СП.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Packet Simulator" Height="600" Width="800">
+    <Grid>
+        <!-- Холст для визуализации сети -->
+        <Canvas x:Name="NetworkCanvas" Width="800" Height="400" VerticalAlignment="Top" Background="White" />
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="10">
+            <TextBlock Text="Статистика обработки пакетов:" FontWeight="Bold" />
+            <TextBlock x:Name="StatisticsTextBlock" Text="Обработано пакетов: 0" />
+            <TextBlock x:Name="DroppedPacketsTextBlock" Text="Потеряно пакетов: 0" />
+            <TextBlock x:Name="NodeLoadTextBlock" Text="Загрузка узлов: " />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Добавить узел" Click="AddNodeButton_Click" Margin="5" />
+                <Button Content="Удалить узел" Click="RemoveNodeButton_Click" Margin="5" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
